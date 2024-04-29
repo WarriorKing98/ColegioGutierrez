@@ -54,7 +54,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>pedro</td>
+                    <td>Jhon Alex</td>
                     <td>10
                     </td>
                     <td>Grado 5.º</td>

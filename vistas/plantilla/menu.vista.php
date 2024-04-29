@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="" class="brand-link">
+    <a href="index.php?ruta=dashboard/dashboard" class="brand-link">
       <img src="./assets/imagenes/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">I.E.D.Gutierrez</span>
     </a>
@@ -13,7 +13,7 @@
           <img src="./assets/imagenes/user1.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">User</a>
+          <a href="index.php?ruta=perfil/perfil" class="d-block">User</a>
         </div>
       </div>
 

@@ -15,6 +15,7 @@
             || $ruta == "conocenos/conocenos"
             || $ruta == "postulados/postulados"
             || $ruta == "cursos/cursos"
+            || $ruta == "perfil/perfil"
             || $ruta == "Contacts/Contacts")
             {
                 /** crar variable para guardar la ruta al archivo php que vamos a abrir */
