@@ -41,11 +41,11 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Pedrito</strong>
+                <strong><i class="fas fa-book mr-1"></i> Santiago</strong>
                 <p>Grado= 3.º </p>
                 <p>Edad= 8 </p>
                 <hr>
-                <strong><i class="fas fa-book mr-1"></i> Antonela</strong>
+                <strong><i class="fas fa-book mr-1"></i> juan </strong>
                 <p>Grado= 5.º </p>
                 <p>Edad= 11 </p>
 

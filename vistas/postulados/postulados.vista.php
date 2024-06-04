@@ -1,117 +1,96 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Postulados</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-              <li class="breadcrumb-item active">Postulados</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+          <?php
+          //hacer el llamado al archivo controlador
+	      	  require_once "./controladores/postulados/postulados.controller.php";
+          ?>
+          
+          <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                  <!-- Content Header (Page header) -->
+                  <section class="content-header">
+                    <div class="container-fluid">
+                      <div class="row mb-2">
+                        <div class="col-sm-6">
+                          <h1>postulados</h1>
+                        </div>
+                        <div class="col-sm-6">
+                          <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active">Marcas</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div><!-- /.container-fluid -->
+                  </section>
+              
+                  <!-- Main content -->
+                  <section class="content">
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Estudiantes postulados</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Grado</th>
-                    <th>Descargar</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>jefferson</td>
-                    <td>8
-                    </td>
-                    <td>Grado 3.º</td>
-                    <td>
-                        <div class="card-footer">
-                            <div class="text-right">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                <i class="fas fa-user"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Jhon Alex</td>
-                    <td>10
-                    </td>
-                    <td>Grado 5.º</td>
-                    <td>
-                        <div class="card-footer">
-                            <div class="text-right">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                <i class="fas fa-user"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Marlon</td>
-                    <td>13
-                    </td>
-                    <td>Grado 6.º</td>
-                    <td>
-                        <div class="card-footer">
-                            <div class="text-right">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                <i class="fas fa-user"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>jose</td>
-                    <td>15
-                    </td>
-                    <td>Grado 6.º</td>
-                    <td>
-                        <div class="card-footer">
-                            <div class="text-right">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                <i class="fas fa-user"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </td>
-                  </tr>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <!-- Advanced Tables -->
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <div class="table-responsive">
+                                  <table id="datatables" class="table table-sm table-striped table-bordered table-hover datatable">
+                                    <thead class="table-header">
+                                      <tr>
+                                        <th width="2%">ID</th>                                  
+                                        <th width="15%">Nombre</th>
+                                        <th width="15%">Apellidos</th>										
+                                        <th width="5%">Edad</th>
+                                        <th width="5%">Grado</th>
+                                        <th width="15%">Numero de contacto</th>
+                                        <th width="15%">Correo</th>
+                                        <th width="10%">CONSULTAR</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
 
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+
+                                      <?php
+
+                                        /**Lllamar al controlador para recuperar los registros de la tabla de base de datos */
+                                        $postulado = PostuladosController::index();
+                                        foreach($postulado as $key => $postulado){
+
+                                         echo ' <tr>
+                                          <td>'. $postulado["id"] .'</td>
+                                          <td>'. $postulado["nombre"] .'</td>
+                                          <td>'. $postulado["apellidos"] .'</td>
+                                          <td>'. $postulado["Edad"] .'</td>
+                                          <td>'. $postulado["Grado"] .'</td>
+                                          <td>'. $postulado["numero_contacto"] .'</td>
+                                          <td>'. $postulado["correo"] .'</td>
+                                          <td>
+                                            <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-eye nav-icon"></i> <span>Consultar</a>
+                                          </td>
+                                        </tr>';
+
+
+                                        }
+
+
+
+                                      ?>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <!--End Advanced Tables -->
+                          </div>
+                          <!-- End <div class="col-md-12"> -->
+                        </div>
+                        <!-- /. ROW  -->
+                      </div>
+                      <!-- /.card-body -->
+
+                    </div>
+
+
+                  </section>
+                  <!-- /.content -->
+                </div>
+            <!-- /.content-wrapper -->
