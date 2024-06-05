@@ -42,7 +42,7 @@
                && isset($_POST["addInputEmail"])
             )
             {
-               $data = array(	"addInputName" => $_POST["addInputName"],
+               $data = array( "addInputName" => $_POST["addInputName"],
                               "addInputLastname" => $_POST["addInputLastname"],
                               "addInputAge" => $_POST[ "addInputAge"],
                               "addInputGrade" => $_POST["addInputGrade"],
@@ -52,9 +52,13 @@
                               "userId" => 1
                            );
 
+
+               
+               
+
                // Ejecutar el metodo create del modelo
                $response = PostuladosModel::postular($data);
-               
+
                //Enviar Mensaje de postulacion exitosa 
                if($response == "Ok")
                       {
@@ -85,6 +89,75 @@
 
             }
       }
+
+      
+         /**Médtodo para mostrar un registro de la tabla mediante el id enviado por la url */
+         static public function show(){
+
+            return $data = PostuladosModel::show($_GET["id"]);
+   
+         }
+   
+ 
+ 
+         /**
+         * Actualizar un registro en la tabla postulaciones por medio del id
+         */
+         
+         static public function update()
+        {
+          
+
+            /** Validar que existan las variables recibidas del formulario */
+            if(isset($_POST["editInputName"]) && isset($_POST["editInputLastname"])
+            && isset($_POST["editteInputAge"]) && isset($_POST["editInputGrade"])
+            && isset($_POST["editInputNumber"])&& isset($_POST["editInputEmail"])
+            && isset($_POST["id"])
+        )
+            {
+                
+                /**Armar la data a enviar al modelo */
+                $data = array(	  
+                                    "id"=>$_POST["id"],	
+                                    "updateInputName" => $_POST["editInputName"],
+                                    "updateInputLastname" => $_POST["editInputLastname"],
+                                    "updateInputAge" => $_POST[ "editInputAge"],
+                                    "updateInputGrade" => $_POST["editInputGrade"],
+                                    "updateInputNumber" => $_POST["editIenputNumber"],
+                                    "updateInputEmail" => $_POST[ "editIenputEmail"],
+                                    //"userId" => $_SESSION["userId"]
+                                    "userId" => 1
+                              );
+
+
+                /**Llamar al modelo para actualizar el registro */
+                $response = PostuladosModel::update($data);
+
+                /** validar la respuesta del modelo  */
+                if($response == "Ok")
+                {
+                    /** Enviar mensaje de actualización correcta */
+                    echo '<script>
+                    
+                            Swal.fire({
+                                icon: "success",
+                                title: "La marca  de producto ha sido actualizada de forma correcta.",
+                            
+                               showConfirmButton: true,
+                                confirmButtonText: "Ok"
+                                }).then(function(result){
+                                            if (result.value) {
+                                                /**Redireccionar a la página principal de categorias de producto */
+                                                window.location.href = "index.php?ruta=parametros/marcas/marca";
+                                            }
+                                        })
+					</script>';
+                }
+                else{
+                    echo "ocurrio un error";
+                }
+            }
+        }
 
     }
  ?>

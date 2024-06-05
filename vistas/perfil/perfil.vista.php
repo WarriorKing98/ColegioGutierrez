@@ -62,7 +62,7 @@
                                 <th width="5%">Grado</th>
                                 <th width="15%">Numero de contacto</th>
                                 <th width="15%">Correo</th>
-                                <th width="10%">CONSULTAR</th>
+                                <th width="30%">ACCIONES</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -83,7 +83,9 @@
                                   <td>'. $postulado["numero_contacto"] .'</td>
                                   <td>'. $postulado["correo"] .'</td>
                                   <td>
-                                    <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-eye nav-icon"></i> <span>Consultar</a>
+                                  <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-eye nav-icon"></i> <span>Consultar</a>
+                                  <a href="#" class="btn btn-danger btn-sm btnDelCategoria""><i class="fa fa-trash nav-icon"></i> <span>Eliminar</span></a>
+                                  <a href="index.php?ruta=postulados/postulados.editar&id='.$postulado["id"].'" class="btn btn-primary btn-sm"><i class="far fa-edit nav-icon"></i> <span></i> <span>Editar</a>
                                   </td>
                                 </tr>';
 
