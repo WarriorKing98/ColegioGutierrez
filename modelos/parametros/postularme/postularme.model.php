@@ -111,7 +111,7 @@ class PostuladosModel{
             
             /** Armar la consulta a la base de datos */
             $update = Connection::Connect()->prepare("UPDATE postulados SET nombre = :updateInputName, apellidos = :updateInputLastname,  
-            Edad = :updateInputAge, Grado = :updateInputGrade, numero_contacto = :updateInputNumber, correo = :updateInputEmail, user_update = :userId
+            Edad = :updateInputAge, Grado = :updateInputGrade, numero_contacto = :updateInputNumber, correo = :updateInputEmail, user_update= :userId
             WHERE id = :id");
         
              /**Asignar parametros*/

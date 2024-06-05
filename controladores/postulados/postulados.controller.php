@@ -110,7 +110,7 @@
 
             /** Validar que existan las variables recibidas del formulario */
             if(isset($_POST["editInputName"]) && isset($_POST["editInputLastname"])
-            && isset($_POST["editteInputAge"]) && isset($_POST["editInputGrade"])
+            && isset($_POST["editInputAge"]) && isset($_POST["editInputGrade"])
             && isset($_POST["editInputNumber"])&& isset($_POST["editInputEmail"])
             && isset($_POST["id"])
         )
@@ -123,8 +123,8 @@
                                     "updateInputLastname" => $_POST["editInputLastname"],
                                     "updateInputAge" => $_POST[ "editInputAge"],
                                     "updateInputGrade" => $_POST["editInputGrade"],
-                                    "updateInputNumber" => $_POST["editIenputNumber"],
-                                    "updateInputEmail" => $_POST[ "editIenputEmail"],
+                                    "updateInputNumber" => $_POST["editInputNumber"],
+                                    "updateInputEmail" => $_POST[ "editInputEmail"],
                                     //"userId" => $_SESSION["userId"]
                                     "userId" => 1
                               );
@@ -141,14 +141,14 @@
                     
                             Swal.fire({
                                 icon: "success",
-                                title: "La marca  de producto ha sido actualizada de forma correcta.",
+                                title: "La actualización de datos fue satisfactoria.",
                             
                                showConfirmButton: true,
                                 confirmButtonText: "Ok"
                                 }).then(function(result){
                                             if (result.value) {
                                                 /**Redireccionar a la página principal de categorias de producto */
-                                                window.location.href = "index.php?ruta=parametros/marcas/marca";
+                                                window.location.href = "index.php?ruta=postulados/postulados";
                                             }
                                         })
 					</script>';

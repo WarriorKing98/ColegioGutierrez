@@ -48,7 +48,6 @@
                                                             <input type="email" id="inputEmail" class="form-control"  name="editInputEmail" value="'.$editpostulados["correo"].'" placeholder="Ingrese un correo de contacto" required="">
                                                         </div> ';
                                             ?>
-                                        </div>
                                     </div>    
                                     <!-- /.card-body -->
                                 </div>
@@ -58,8 +57,9 @@
                         </div>
                         <div class="row">
                             <div class="col-12 text-right">
-                                <button type="submit" class="btn btn-success"><i class="fa fa-save nav-icon"></i> <span>Actualizar</button>
-                            </div>
+                                <button type="submit" class="btn btn-success"><i class="fa fa-save nav-icon"></i> <span>Guardar</button>
+                                <a href="index.php?ruta=perfil/perfil" class="btn btn-warning"><i class="fa fa-power-off nav-icon"></i> <span>Cancelar</a>
+                            </div>                       
                         </div>
                     </section>
                     <!-- /.content -->
@@ -76,6 +76,6 @@
     /**
      * Llamar a la función del controlador: Crear 
      */
-    $addpostularModel = PostuladosController::postular();
+    $postuladosUpdate = PostuladosController::update();
 
 ?>
