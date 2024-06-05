@@ -42,6 +42,14 @@
                                                 <label for="inputDescription">Correo del acudiente </label>
                                                 <input type="email" id="inputEmail" class="form-control"  name="addInputEmail" placeholder="Ingrese un correo de contacto" required="">
                                             </div>
+                                            <div class="form-group">
+                                                <label for="inputActive">ACTIVO</label>
+                                                <select id="inputActive" class="form-control custom-select" name="addInputActive" required>
+                                                    <option Value="">Seleccione si esta activo el registro.</option>
+                                                    <option value=1>SI</option>
+                                                    <option value=0>NO</option>
+                                                </select>
+                                            </div>
                                     </div>
                                 <!-- /.card-body -->
                                 </div>

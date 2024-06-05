@@ -40,6 +40,7 @@
                && isset($_POST["addInputGrade"])
                && isset($_POST["addInputNumber"])
                && isset($_POST["addInputEmail"])
+               && isset($_POST["addInputActive"])
             )
             {
                $data = array( "addInputName" => $_POST["addInputName"],
@@ -48,6 +49,7 @@
                               "addInputGrade" => $_POST["addInputGrade"],
                               "addInputNumber" => $_POST["addInputNumber"],
                               "addInputEmail" => $_POST[ "addInputEmail"],
+                              "addInputActive" => $_POST["addInputActive"],
                               //"userId" => $_SESSION["userId"]
                               "userId" => 1
                            );
@@ -70,7 +72,7 @@
                           
                                   Swal.fire({
                                     icon: "success",
-                                    title: "La postulación se realizó con satisfacción, te daremos respuesta por correo o por llamada ",
+                                    title: "La postulación se realizó con satisfacción, te daremos respuesta por correo o llamada ",
                                 
                                     showConfirmButton: true,
                                     confirmButtonText: "Aceptar"
@@ -112,7 +114,7 @@
             if(isset($_POST["editInputName"]) && isset($_POST["editInputLastname"])
             && isset($_POST["editInputAge"]) && isset($_POST["editInputGrade"])
             && isset($_POST["editInputNumber"])&& isset($_POST["editInputEmail"])
-            && isset($_POST["id"])
+            && isset($_POST["editInputActive"])&& isset($_POST["id"])
         )
             {
                 
@@ -125,6 +127,7 @@
                                     "updateInputGrade" => $_POST["editInputGrade"],
                                     "updateInputNumber" => $_POST["editInputNumber"],
                                     "updateInputEmail" => $_POST[ "editInputEmail"],
+                                    "updateInputActive" => $_POST["editInputActive"],
                                     //"userId" => $_SESSION["userId"]
                                     "userId" => 1
                               );

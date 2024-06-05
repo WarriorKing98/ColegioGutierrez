@@ -27,7 +27,7 @@ class PostuladosModel{
         try {
 
             //Realizar la consulta a la base de datos */
-            $datos = Connection::connect()->prepare("SELECT pos.id, pos.nombre, pos.apellidos, pos.Edad, pos.Grado, pos.numero_contacto, pos.correo
+            $datos = Connection::connect()->prepare("SELECT pos.id, pos.nombre, pos.apellidos, pos.Edad, pos.Grado, pos.numero_contacto, pos.correo, pos.activo, if(activo = 1,'SI','NO') AS activo
                             From postulados AS pos
                             ORDER BY pos.id DESC");
             //Ejecutar la consulta*/
@@ -52,8 +52,8 @@ class PostuladosModel{
     {
 
         //Crear la consulta para insertar la postulación en la tabla 
-        $postular = Connection::connect()->prepare("INSERT INTO postulados ( nombre, apellidos, Edad, Grado, numero_contacto, correo, user_create)
-                                                    VALUES( :addInputName, :addInputLastname, :addInputAge, :addInputGrade, :addInputNumber, :addInputEmail, :userId)");
+        $postular = Connection::connect()->prepare("INSERT INTO postulados ( nombre, apellidos, Edad, Grado, numero_contacto, correo, activo, user_create)
+                                                    VALUES( :addInputName, :addInputLastname, :addInputAge, :addInputGrade, :addInputNumber, :addInputEmail, :addInputActive, :userId)");
                                             
         /**Asignar parametros */
         $postular -> bindParam(":addInputName",$data["addInputName"], PDO::PARAM_STR);
@@ -62,6 +62,7 @@ class PostuladosModel{
         $postular -> bindParam(":addInputGrade",$data["addInputGrade"], PDO::PARAM_INT);
         $postular -> bindParam(":addInputNumber",$data["addInputNumber"], PDO::PARAM_INT);
         $postular -> bindParam(":addInputEmail",$data["addInputEmail"], PDO::PARAM_STR);
+        $postular -> bindParam(":addInputActive",$data["addInputActive"], PDO::PARAM_INT);
         $postular -> bindParam(":userId",$data["userId"], PDO::PARAM_INT);
         
       
@@ -82,7 +83,7 @@ class PostuladosModel{
         static public function show($id)
         {
             /** Realizar la consulta a la base de datos */
-            $data = Connection::connect()->prepare("SELECT pos.id, pos.nombre, pos.apellidos, pos.Edad, pos.Grado, pos.numero_contacto, pos.correo
+            $data = Connection::connect()->prepare("SELECT pos.id, pos.nombre, pos.apellidos, pos.Edad, pos.Grado, pos.numero_contacto, pos.correo, pos.activo, if(activo = 1,'SI','NO') AS activo
             From postulados AS pos
             WHERE pos.id =:id");
 
@@ -111,7 +112,7 @@ class PostuladosModel{
             
             /** Armar la consulta a la base de datos */
             $update = Connection::Connect()->prepare("UPDATE postulados SET nombre = :updateInputName, apellidos = :updateInputLastname,  
-            Edad = :updateInputAge, Grado = :updateInputGrade, numero_contacto = :updateInputNumber, correo = :updateInputEmail, user_update= :userId
+            Edad = :updateInputAge, Grado = :updateInputGrade, numero_contacto = :updateInputNumber, correo = :updateInputEmail, activo = :updateInputActive, user_update= :userId
             WHERE id = :id");
         
              /**Asignar parametros*/
@@ -122,6 +123,7 @@ class PostuladosModel{
             $update -> bindParam(":updateInputGrade",$data["updateInputGrade"], PDO::PARAM_INT);
             $update -> bindParam(":updateInputNumber",$data["updateInputNumber"], PDO::PARAM_INT);
             $update -> bindParam(":updateInputEmail",$data["updateInputEmail"], PDO::PARAM_STR);
+            $update -> bindParam(":updateInputActive",$data["updateInputActive"], PDO::PARAM_INT);
             $update -> bindParam(":userId",$data["userId"], PDO::PARAM_INT);
 
             /** Ejecutar la consulta y retornar el resultado al controlador */

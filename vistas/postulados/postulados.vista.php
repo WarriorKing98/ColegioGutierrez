@@ -41,6 +41,7 @@
                                         <th width="5%">Grado</th>
                                         <th width="15%">Numero de contacto</th>
                                         <th width="15%">Correo</th>
+                                        <th width="5%">ACTIVO</th>
                                         <th width="30%">CONSULTAR</th>
                                       </tr>
                                     </thead>
@@ -61,6 +62,7 @@
                                           <td>'. $postulado["Grado"] .'</td>
                                           <td>'. $postulado["numero_contacto"] .'</td>
                                           <td>'. $postulado["correo"] .'</td>
+                                          <td>'. $postulado["activo"] .'</td>
                                           <td>
                                             <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-eye nav-icon"></i> <span>Consultar</a>
 																		        <a href="#" class="btn btn-danger btn-sm btnDelCategoria""><i class="fa fa-trash nav-icon"></i> <span>Eliminar</span></a>

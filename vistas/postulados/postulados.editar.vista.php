@@ -46,7 +46,15 @@
                                                         <div class="form-group">
                                                             <label for="inputDescription">Correo del acudiente </label>
                                                             <input type="email" id="inputEmail" class="form-control"  name="editInputEmail" value="'.$editpostulados["correo"].'" placeholder="Ingrese un correo de contacto" required="">
-                                                        </div> ';
+                                                        </div> 
+                                                        <div class="form-group">
+                                                            <label for="inputActive">ACTIVO</label>
+                                                            <select id="inputActive" class="form-control custom-select" name="editInputActive" required>
+                                                            <option value = '.$editpostulados["activo"].' > '.$editpostulados["activo"].' </option>
+                                                                <option value=1>SI</option>
+                                                                <option value=0>NO</option>
+                                                            </select>
+                                                        </div>';
                                             ?>
                                     </div>    
                                     <!-- /.card-body -->
