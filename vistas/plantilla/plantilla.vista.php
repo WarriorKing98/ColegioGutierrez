@@ -266,5 +266,6 @@
         
         <!-- JS propio del template y nuestra aplicación -->
         <script src="./assets/js/plantilla.js"></script>
+        <script src="./assets/js/postulados.js"></script>
     </body>
 </html>

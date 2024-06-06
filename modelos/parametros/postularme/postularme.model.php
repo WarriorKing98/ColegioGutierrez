@@ -140,6 +140,41 @@ class PostuladosModel{
   
         }
 
+        /** Eliminar una postulacion en la tabla marcas por medio del id  */
+      static public function delete($id)
+      {
+        try {
+
+            /** Realizar la consulta a la base de datos */
+            //$delete = Connection::Connect()->prepare("DELETE FROM categorias WHERE id =:id");
+
+            /** Armar la consulta a la base de datos para inactivar y no eliminar */
+            $update = Connection::Connect()->prepare("UPDATE postulados SET activo = 0, user_update = 1
+            WHERE id = :id");
+
+            /**Asignar parametros*/
+            $update -> bindParam(":id",$id, PDO::PARAM_INT);
+
+            //** ojo!!!!!! cambiar el 1 potr el usuario logueado en la aplicación, mas adelantre hacemos esto */
+            //update -> bindParam(":userId", , PDO::PARAM_INT);
+
+            /**Ejecutar la consulta */
+            if($update -> execute()){
+
+                return "Ok";
+            }
+            else{
+                return "Error";
+            }
+            /**Cerrar conexion a la bd */
+            $update->close();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            die();
+        }
+    }
+
+
 }
 
 

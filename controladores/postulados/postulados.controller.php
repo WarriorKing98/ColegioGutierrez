@@ -162,5 +162,45 @@
             }
         }
 
+        
+         /**
+         * Función para eliminar postulacion
+         */
+        static public function delete() {
+            //** Valñidar la variable id que exista y contenga un valor no nulo */
+            if(isset($_GET["id"]))
+            {
+  
+                $response = PostuladosModel::delete($_GET["id"]);
+    
+                if($response == "Ok" )
+                    {
+                    
+                        /** Enviar mensaje de eliminación correcta */
+                        echo '<script>
+                        
+                            Swal.fire({
+                                icon: "success",
+                                title: "La Marca de producto ha sido eliminada de forma correcta.",
+                            
+                            showConfirmButton: true,
+                                confirmButtonText: "Ok"
+                                }).then(function(result){
+                                            if (result.value) {
+                                                /**Redireccionar a la página principal de marcas de producto*/
+                                                window.location.href = "index.php?ruta=postulados/postulados";
+                                            }
+                                        })
+                        </script>';
+                    }
+                    else
+                    {
+                        echo "error";
+                    }
+    
+            }
+        }
+  
+
     }
  ?>
