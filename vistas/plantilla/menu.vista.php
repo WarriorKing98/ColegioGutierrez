@@ -85,6 +85,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="index.php?ruta=plantilla/salir" class="nav-link">
+              <i class="nav-icon fas fa-columns"></i>
+              <p>
+              Salir
+              </p>
+            </a>
+          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

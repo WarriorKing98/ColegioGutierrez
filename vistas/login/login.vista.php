@@ -1,17 +1,24 @@
+<?php
+  //hacer el llamado al archivo controlador
+	require_once "./controladores/usuarios/usuarios.controlador.php";
+?>
 
-<div class="content-wrapper">
-    <div class="hold-transition login-page">
+    <div class=" login-page">
+
     <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-        <a class="h1"><b>Inicia sesión</b></a>
+        <a class="h1"><b>ingresar</b></a>
         </div>
+       
         <div class="card-body">
+
+        <form method="post">
+
         
-        <form action="../../index3.html" method="post">
             <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" class="form-control" placeholder="Email" name="lgnEmail">
             <div class="input-group-append">
                 <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -19,32 +26,37 @@
             </div>
             </div>
             <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" class="form-control" placeholder="Password" name="lgnPassword">
             <div class="input-group-append">
                 <div class="input-group-text">
                 <span class="fas fa-lock"></span>
                 </div>
             </div>
             </div>
+            
             <div class="row">
-            <div class="col-8">
-                <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                    Guardar
-                </label>
-                </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
             </div>
-            <!-- /.col -->
-            <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Continuar</button>
-            </div>
+            
             <!-- /.col -->
             </div>
-        </form>
+
+
+            <?php
+            /**
+             * Crear variable para llamar al conrolador y ejecutar la función de login
+             */
+            $login = new UsuarioControlador();
+            $login -> LoginUsuario();
+
+            ?>
+
+            </form>
 
         <p class="mb-1">
-            <a href="forgot-password.html">olvide mi contraseña</a>
+            <a href="index.php?ruta=creacion/padres/padres">Crear cuenta</a>
         </p>
         </div>
         <!-- /.card-body -->

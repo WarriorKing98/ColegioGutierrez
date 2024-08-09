@@ -1,3 +1,8 @@
+<?php
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -31,42 +36,41 @@
 
 
     <body class="hold-transition sidebar-mini">
-
-        <!-- Site wrapper -->
-        <div class="wrapper">
-
+           
             <?php
-
-                include "encabezado.vista.php";
-
-                include "menu.vista.php";
-
-                /** Validar que ruta se esta pasamdo por la url  para abrir página */
-
                 
-                $rutas = new RutasControlador();
-                $rutas -> Rutas();
 
-                //include "./vistas/dashboard/dashboard.vista.php";
+                if (isset($_SESSION["startSession"]) && $_SESSION["startSession"] == "Ok") {
+                    echo '<div id="wrapper">';
+                    include "encabezado.vista.php";
 
+                    include "menu.vista.php";
+
+                    /** Validar que ruta se esta pasamdo por la url  para abrir página */
+    
+                    
+                    $rutas = new RutasControlador();
+                    $rutas -> Rutas();
+    
+                    include "piepagina.vista.php";
+    
+                    //include "./vistas/dashboard/dashboard.vista.php";
+    
+                    echo "</div>";
+                }
+                else
+                {
+                    if(isset($_GET["exit"]) && $_GET["exit"] == true){
+                      include "salir.vista.php";
+                    }
+                    else
+                    {
+                        include "./vistas/login/login.vista.php";
+                    }
+                  }
             ?> 
-
-            <?php
-
-                include "piepagina.vista.php";
-
-            ?>
-
-
-
-
         </div>
         <!--  /Site wrapper -->
-
-
-
-
-
 
          <!-- DataTables  & Plugins -->
         <script src="./assets/temas/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>

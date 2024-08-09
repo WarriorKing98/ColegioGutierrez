@@ -50,8 +50,7 @@
                               "addInputNumber" => $_POST["addInputNumber"],
                               "addInputEmail" => $_POST[ "addInputEmail"],
                               "addInputActive" => $_POST["addInputActive"],
-                              //"userId" => $_SESSION["userId"]
-                              "userId" => 1
+                              "userId" => $_SESSION["userId"],
                            );
 
 
