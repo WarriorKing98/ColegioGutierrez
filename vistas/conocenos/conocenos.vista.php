@@ -18,7 +18,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                    <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+                    <strong><i class="far fa-file-alt mr-1"></i>Nuestra Historia</strong>
 
                     <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                         Deleniti dolore impedit vel maiores ullam quam sint quidem minus. Suscipit maxime commodi nostrum atque neque quidem quam. 

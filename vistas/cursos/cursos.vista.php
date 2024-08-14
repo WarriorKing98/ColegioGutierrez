@@ -31,7 +31,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> 10 cupos disponibles </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -54,7 +54,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> 3 cupos disponibles </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -77,7 +77,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> 7 cupos disponibles</b></h2>
+                      <h2 class="lead"><b> </b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -100,7 +100,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>4 cupos disponibles</b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -123,7 +123,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>1 cupos disponibles </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -146,7 +146,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> 11 cupos disponibles  </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -169,7 +169,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> 10 cupos disponibles  </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -192,7 +192,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>1 cupos disponibles </b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>
@@ -215,7 +215,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>2 cupos disponibles</b></h2>
+                      <h2 class="lead"><b></b></h2>
                     </div>
                     <div class="col-5 text-center">
                     </div>

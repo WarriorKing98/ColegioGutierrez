@@ -32,7 +32,7 @@ class UsuarioControlador{
 
                  //**Array de datos recibidos para enviar al modelo */               
                 $values = array("email" => $_POST["lgnEmail"],
-					           "password" => $_POST["lgnPassword"]);
+					           "contrasena" => $_POST["lgnPassword"]);
 
                 //**Llamar al modelo */
                 $response = UsuarioModelo::LoginUsuario($values);

@@ -22,14 +22,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-item">
-            <a href="index.php?ruta=postularme/postularme" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-              Postularme 
-              </p>
-            </a>
-          </li>
+               
           </li>
           <li class="nav-item">
             <a href="index.php?ruta=conocenos/conocenos" class="nav-link">
@@ -47,28 +40,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Crear usuario
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="index.php?ruta=creacion/padres/padres" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>padre de familia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="index.php?ruta=creacion/administrativo/administrativo" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>administrativo</p>
-                </a>
-              </li>
-            </ul>
           <li class="nav-item">
             <a href="index.php?ruta=cursos/cursos" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>

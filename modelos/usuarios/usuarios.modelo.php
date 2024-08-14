@@ -11,13 +11,13 @@
             /**
              * Consulta a base de datos
              */
-            $data = Connection::Connect()->prepare("SELECT * FROM usuarios WHERE email = :email AND password =:password");
+            $data = Connection::Connect()->prepare("SELECT * FROM usuarios WHERE email = :email AND contrasena =:contrasena");
 
             /**
              * Enlazar parametros
              */
             $data-> bindParam(":email", $values["email"], PDO::PARAM_STR);
-            $data-> bindParam(":password", $values["password"], PDO::PARAM_STR);
+            $data-> bindParam(":contrasena", $values["contrasena"], PDO::PARAM_STR);
 
         
             $data -> execute();

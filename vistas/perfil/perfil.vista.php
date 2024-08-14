@@ -25,9 +25,6 @@
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Estudiantes a cargo</b> <a class="float-right">2</a>
-                  </li>
-                  <li class="list-group-item">
                     <b>Correo</b> <a class="float-right">*******@gmail.com</a>
                   </li>
                   <li class="list-group-item">

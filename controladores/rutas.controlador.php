@@ -16,7 +16,7 @@
                     $ruta = $_GET["ruta"];
                 }
                 else{
-                    $ruta = "dashboard/dashboard";
+                    $ruta = "dashboard/dashboard"; // ruta por defecto 
                 }
 
                 /** LLamar al modelo para armar la ruta */
@@ -28,7 +28,5 @@
 
 
     }
-
-
 
 ?>

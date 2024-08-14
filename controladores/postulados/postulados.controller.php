@@ -71,7 +71,7 @@
                           
                                   Swal.fire({
                                     icon: "success",
-                                    title: "La postulación se realizó con satisfacción, te daremos respuesta por correo o llamada ",
+                                    title: "La postulación se realizó con satisfacción, te daremos respuesta por correo o llamada",
                                 
                                     showConfirmButton: true,
                                     confirmButtonText: "Aceptar"
